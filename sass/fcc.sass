@@ -1,0 +1,140 @@
+$topLeftOff: #00BB00
+$topLeftOn: #00FF00
+$topRightOff: #BB0000
+$topRightOn: #FF0000
+$bottomLeftOff: #BBBB00
+$bottomLeftOn: #FFFF00
+$bottomRightOff: #000077
+$bottomRightOn: #0000FF
+$startButtonColor: red
+$strictButtonColor: yellow
+$mainBorder: black
+//Counter
+$counterBGColor: blue
+$numberOffColor: blue
+$numberOnColor: green
+
+
+body
+  margin-top: 0
+  margin-right: 0
+  margin-left: 0
+  margin-bottom: 0
+
+.simonElem
+  width: 300px
+  height: 300px
+  border: 20px solid $mainBorder
+  cursor: pointer
+  display: inline-block
+#app
+  #topLeft
+    background-color: $topLeftOff
+    border-top-left-radius: 100%
+  #topRight
+    background-color: $topRightOff
+    border-top-right-radius: 100%
+    margin-left: -24px
+  #bottomLeft
+    background-color: $bottomLeftOff
+    border-bottom-left-radius: 100%
+    margin-top: -24px
+  #bottomRight
+    background-color: $bottomRightOff
+    border-bottom-right-radius: 100%
+    margin-left: -24px
+    margin-top: -24px
+  .topLeftOn
+    background-color: $topLeftOn !important
+  .topRightOn
+    background-color: $topRightOn !important
+  .bottomLeftOn
+    background-color: $bottomLeftOn !important
+  .bottomRightOn
+    background-color: $bottomRightOn !important
+
+#middle
+  width: 400px
+  height: 400px
+  border-radius: 100%
+  border: 10px solid $mainBorder
+  background-color: silver
+  position: absolute
+  top: 120px
+  left: 120px
+  text-align: center
+#simonTitle
+  font-size: 100px
+  font-weight: bold
+  margin-top: 50px
+  display: inline-block
+#count
+  float: left
+  margin-left: 60px
+  #countField
+    width: 80px
+    height: 60px
+    background-color: #400000
+    display: inline-block
+    border-radius: 10px
+    border: 5px solid #505050
+    span
+      width: 10px
+#start
+  display: inline-block
+  #startButton
+    width: 30px
+    height: 30px
+    background-color: $startButtonColor
+    border-radius: 100%
+    border: 5px solid #505050
+    display: inline-block
+    margin-top: 15px
+#strict
+  float: right
+  margin-right: 60px
+  #strictButton
+    width: 30px
+    height: 30px
+    display: inline-block
+    background-color: $strictButtonColor
+    border-radius: 100%
+    border: 5px solid #505050
+    margin-top: 15px
+    &:active
+      width: 28px
+      height: 28px
+      border: 6px solid #505050
+
+
+/* COUNTER */
+#counter
+  width: 80px
+  padding: 0 5px
+  background-color: $counterBGColor
+.number
+  width: 20px
+  display: inline-block
+  div
+    display: inline-block
+    background-color: $numberOffColor
+    &.on
+      background-color: $numberOnColor !important
+  .top, .middle, .bottom
+    width: 14px
+    height: 2px
+  .topLeft, .topRight, .bottomLeft, .bottomRight
+    height: 14px
+    width: 2px
+  .topLeft, .bottomLeft
+    float: left
+  .topRight, .bottomRight
+    float: right
+  .topLeft, .topRight
+    margin-top: 16px
+  .bottomLeft, .bottomRight
+     margin-top: -5px
+  .middle
+     margin-bottom: 2px
+  .bottom
+     margin-bottom: 5px

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./fcc.css">
+</head>
+<body>
+  <div id="wrap">
+    <div id="app">
+      <div @click="TopLeft"
+           id="topLeft"
+           class="simonElem"
+           :class="{topLeftOn: topLeftOn}">
+      </div>
+      <div @click="TopRight"
+           id="topRight"
+           class="simonElem">
+      </div><br />
+      <div @click="BottomLeft"
+           id="bottomLeft"
+           class="simonElem">
+      </div>
+      <div @click="BottomRight"
+           id="bottomRight"
+           class="simonElem">
+      </div><br />
+      <div id="middle">
+        <span id="simonTitle">Simon</span><br />
+        <div id="count">
+          <counter></counter>
+        </div>
+        <div id="start">
+          <span @click="Start"
+                id="startButton">
+          </span>
+        </div>
+        <div id="strict">
+          <span @click="Strict"
+                id="strictButton">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+7<script src ="https://unpkg.com/vuex"></script>
+<script type="text/javascript" src="./fcc.js"></script>
+</html>
